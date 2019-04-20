@@ -7,7 +7,7 @@ var plugins = require('gulp-load-plugins')();
 var utils = require('./utils/utils');
 
 /********************************************
-*			Configs And Paths
+*			配置文件和路径
 *********************************************/
 
 var config = require('../config/');
@@ -15,7 +15,7 @@ var paths = config.paths;
 
 
 /********************************************
-*   		Load Build Tasks
+*   		加载编译生成任务
 *********************************************/
 
 var buildTasks = utils.loadTasks(gulp, plugins, paths);
@@ -23,10 +23,10 @@ var buildTasks = utils.loadTasks(gulp, plugins, paths);
 gulp.task('build', buildTasks);
 
 /*********************************************
-*				 Other Tasks
+*				 其他任务
 **********************************************/
 
-// Local server pointing on build folder
+// 本地服务器指向生成文件夹
 gulp.task('connect', function() {
 	plugins.connect.server({
 		root: config.destDir,
@@ -36,35 +36,35 @@ gulp.task('connect', function() {
 });
 
 
-// Rerun the task when a file changes
+// 文件更改时重新运行任务
 gulp.task('watch', function() {
-	// When template changes recompile .html pages
+	// 模板更改时重新编译 .html 页面
 	plugins.watch(paths.app.templates, function() {
 	    gulp.start('app-pages');
 	});
 
-	// When context file changes recompile .html pages
+	// 当上下文文件更改时重新编译 .html 页面
 	plugins.watch(config.srcDir + "/**/.context.js", function() {
 	    gulp.start('app-pages');
 	});
 
-	// When script changes recompile scripts
+	// 当脚本更改时，重新编译脚本
 	plugins.watch(paths.app.scripts, function() {
 	    gulp.start('app-scripts');
 	});
 
-	// When style changes recompile styles
+	// 当样式更改时，重新编译样式
 	plugins.watch(paths.app.styles, function() {
 	    gulp.start('app-styles');
 	});
 
-	// When theme changes recompile themes
+	// 当主题更改时，重新编译主题
 	plugins.watch(paths.app.themes, function() {
 	    gulp.start('app-themes');
 	});
 });
 
-// Builds and deploys to github pages
+// 生成并部署到Github页面
 gulp.task('deploy', ['build'], function() {
 	return gulp.src('../dist/**/*')
 		.pipe(plugins.ghPages({
@@ -75,11 +75,11 @@ gulp.task('deploy', ['build'], function() {
 
 
 /********************************************
-*				Main Tasks
+*				主任务
 *********************************************/
 
 
-// // Run this task for development
+// // 运行此任务进行开发
 gulp.task('develop', [
 	'build',
 	'watch',

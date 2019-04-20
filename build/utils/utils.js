@@ -4,7 +4,7 @@ var path = require('path');
 function loadTasks(gulp, plugins, paths) {
 	var taskNames = [];
 
-	// Load all tasks from tasks folder
+	// 从“tasks”文件夹加载所有任务
 	glob.sync(path.resolve(__dirname, '../tasks/*.js')).forEach(function(filePath) {
 		var taskName = path.basename(filePath, '.js');
 			taskNames.push(taskName);

@@ -17,7 +17,7 @@ var partials = {};
 module.exports.task = function(gulp, plugins, paths) {
 
 
-	// Register handlebars engine helpers and partials
+	// 注册handlebars引擎助手和部件
 	handlebarsRegistrar(handlebars, {
 		helpers: paths.app.helpers,
 		partials: paths.app.templates,
@@ -38,48 +38,48 @@ module.exports.task = function(gulp, plugins, paths) {
 
 
 	gulp.src(paths.app.pages)
-		// Render pages
+		// 渲染页面
 		.pipe(through.obj(function (file, enc, cb) {
 			file.contents = new Buffer(renderTemplate(file));
 
 			this.push(file);
 			cb();
 		}))
-		// Handle errors
+		// 处理错误
 		.on('error', plugins.util.log)
 
-		// Rename .page.hbs to .html
+		// 重命名 .page.hbs 为 .html
 		.pipe(plugins.rename(function (path) {
 			path.basename = path.basename.replace("-page", "");
 			path.extname = ".html"
 		}))
 
-		// Flatten structure
+		// 扁平化结构 Flatten structure
 		.pipe(plugins.flatten())
 
-		// pretify html structure
+		// 预定义HTML结构 pretify html structure
 		.pipe(plugins.prettify({
 			indent_size: 4
 		}))
 
-		// Output
+		// 输出
 		.pipe(gulp.dest(config.destDir))
 
-		//Live-Reload
+		// 现场重载 Live-Reload
 		.pipe(plugins.connect.reload());
 
 };
 
 
 /********************************************
-*				Utils
+*				实用工具
 *********************************************/
 
 function renderTemplate(file, options) {
 
 	options = options || {};
 
-	// Set file frontMatter
+	// 设置文件前事项 Set file frontMatter
 	file = setFrontMatter(file);
 
 	// Get context from _context.js files and frontmatter
@@ -96,17 +96,17 @@ function renderTemplate(file, options) {
 		context = extend(context, contextTemplate);
 		context = extend(context, contextInherited);
 
-	// Page render result
+	// 页面渲染结果
 	var pageRes = "";
 
-	// Compile template
+	// 编译模板
 	var template = handlebars.compile(String(file.contents));
 	var templateRes = template(context);
 
-	// Layout processing
+	// 布局处理
 	var layout = context.layout || null;
 
-	// If the layout exists, render it with template inside
+	// 如果布局存在，则使用内部模板渲染
 	if (layout && partials[layout] && handlebars.partials[layout]) {
 
 		// New instance of context
@@ -153,20 +153,24 @@ function setFrontMatter(file) {
 
 
 /*
+    此函数返回当前页的上下文
+    它是根上下文，由所有上下文扩展到
+	当前级别上下文
+	也可以在根文件夹中使用.env文件
+
 	This function returns context of current page
 	which is root context extended by all contexts untill
 	current level context
-
 	You may also use .env file in root folder
 */
 
 
 function getPageContextExternal(file) {
 
-	// Initial context
+	// 初始化上下文
 	var context = {};
 
-	// Environmental variables
+	// 环境变量
 	env = dotenv.config({
 		path: path.resolve(config.rootDir, '.env')
 	}) || {};
@@ -179,7 +183,7 @@ function getPageContextExternal(file) {
 
 	context.BASE_URL = context.BASE_URL || '/';
 
-	// Package data
+	// 包数据
 	context.pkg = require('../../package.json');
 
 	var rootDir = path.resolve(config.srcDir);
@@ -187,14 +191,14 @@ function getPageContextExternal(file) {
 
 	var contextPaths = [];
 
-	// Start going up from page directory until root directory
+	// 开始从页面目录直到根目录
 	for (var activeDir = pageDir; activeDir.length >= rootDir.length; activeDir = path.resolve(activeDir, '../') ) {
 		contextPaths.push(
 			path.resolve(activeDir, '_context.js')
 		);
 	}
 
-	// Reverse context, so the iteration will start from root level context
+	// 反向上下文，因此迭代将从根级上下文开始
 	contextPaths.reverse();
 
 

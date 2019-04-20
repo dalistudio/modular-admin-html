@@ -1,21 +1,19 @@
 # ModularAdmin: Free Bootstrap 4 Dashboard Theme <br> HTML version
 
-[![Backers on Open Collective](https://opencollective.com/modular-admin/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/modular-admin/sponsors/badge.svg)](#sponsors) [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
+[![演示](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
 
 <p align="center">
   <strong>
-    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">查看演示</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">下载 ZIP</a>
+    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">演示</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">下载 ZIP</a>
   </strong>
 </p>
 
-**[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain. This project is proudly supported by <a href="https://screenful.com/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Agile Metrics by Screenful</a> (*instant visual <a href="https://screenful.com/dashboard-for-trello/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">dashboards for Trello</a> | <a href="https://screenful.com/dashboard-for-jira/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Jira</a> | <a href="https://screenful.com/dashboard-for-asana/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Asana</a> | <a href="https://screenful.com/dashboard-for-pivotal-tracker/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Pivotal Tracker</a> | <a href="https://screenful.com/dashboard-for-github/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Github</a>*)
+**[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** 是一个开源的 **仪表盘主题** 以模块化的方式构建。 这使得它易于扩展、修改和维护。This project is proudly supported by <a href="https://screenful.com/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Agile Metrics by Screenful</a> (*instant visual <a href="https://screenful.com/dashboard-for-trello/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">dashboards for Trello</a> | <a href="https://screenful.com/dashboard-for-jira/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Jira</a> | <a href="https://screenful.com/dashboard-for-asana/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Asana</a> | <a href="https://screenful.com/dashboard-for-pivotal-tracker/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Pivotal Tracker</a> | <a href="https://screenful.com/dashboard-for-github/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Github</a>*)
 
 
 #### Heads up for the ModularAdmin v2!
 我们正在努力编写版本2，这是一个完整的重写。
-<a href="https://modular-admin-html.modularcode.io/" target="_blank">V2 演示</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 代码</a> <br>
+<a href="https://modular-admin-html.modularcode.io/" target="_blank">V2 演示</a> | <a href="https://github.com/dalistudio/modular-admin-html/tree/v2-dev" >V2 代码</a> <br>
 **请考虑 [支持我们](#support-us) 让这一切发生！**
 
 ---
@@ -28,7 +26,7 @@
 ### 1. [下载 ZIP](https://github.com/dalistudio/modular-admin-html/releases/latest) 或者 Git 克隆
 
 ```
-git clone https://github.com/modularcode/modular-admin-html.git
+git clone https://github.com/dalistudio/modular-admin-html.git
 ```
 ### 2. 编译生成项目
 
@@ -70,7 +68,7 @@ npm start
 #### ```config/``` 目录
 
 此文件夹包含应用程序生成配置和路径定义。
-For **adding/removing NPM dependencies** you need to **manually define the paths** in `config/index.js` file after the module installation.
+对于 **添加/移除 NPM 依赖关系** 你需要在模块安装后 **手动定义路径** 在 `config/index.js` 文件。
 
 #### ```build/``` 目录
 
@@ -176,7 +174,7 @@ For **adding/removing NPM dependencies** you need to **manually define the paths
 
 页面可以由不同的模板（部分）组成，这些模板（部分）可以包含在handlebars部分包括功能中。另外，每个页面都有其上下文，这是在呈现时传递到模板中的数据。该数据用于模板表达式和变量。页面上下文可以用两种方式定义：
 
-**YAML** headers ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/dashboard/index-page.hbs))
+**YAML** headers ([例子](https://github.com/dalistudio/modular-admin-html/blob/master/src/app/dashboard/index-page.hbs))
 
 ```
 ---
@@ -245,64 +243,24 @@ docker-compose up
 
 ### 取得联系
 
-你可以在聊天室和我们联系 [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)或者在 [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
+你可以在聊天室和我们联系
 如果您有任何问题、建议、评论和潜在功能请求，请随时联系我们。
 
-* Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | gevharut[at]gmail.com
-* Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
-* David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
+* Dali Wang | wangdali[at]qq.com
+
 
 
 
 ### 支持者
 
-支持我们每月捐赠，帮助我们继续我们的活动。 [[Become a backer](https://opencollective.com/modular-admin#backer)]
+支持我们每月捐赠，帮助我们继续我们的活动。 [[成为支持者](http://dalistudio.net)]
 
-<a href="https://opencollective.com/modular-admin/backer/0/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/0/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/1/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/1/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/2/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/2/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/3/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/3/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/4/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/4/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/5/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/5/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/6/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/6/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/7/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/7/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/8/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/8/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/9/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/9/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/10/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/10/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/11/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/11/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/12/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/12/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/13/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/13/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/14/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/14/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/15/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/15/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/16/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/16/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/17/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/17/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/18/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/18/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/19/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/19/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/20/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/20/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/21/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/21/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/22/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/22/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/23/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/23/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/24/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/24/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/25/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/25/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/26/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/26/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/27/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/27/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/28/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/28/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/backer/29/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/29/avatar.svg"></a>
 
 
 ## 赞助商
 
-成为一个赞助商，在GitHub的自述文件中找到你的标志，并链接到你的网站。 [[Become a sponsor](https://opencollective.com/modular-admin#sponsor)]
+成为一个赞助商，在GitHub的自述文件中找到你的标志，并链接到你的网站。 [[成为赞助商](http://dalistudio.net)]
 
-<a href="https://opencollective.com/modular-admin/sponsor/0/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/1/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/2/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/3/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/4/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/5/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/6/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/7/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/8/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin/sponsor/9/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/9/avatar.svg"></a>
+
 
 

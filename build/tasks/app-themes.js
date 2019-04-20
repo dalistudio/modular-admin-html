@@ -4,14 +4,14 @@ var glob = require('glob');
 
 module.exports.task = function(gulp, plugins, paths) {
 
-	// For each theme file
+	// 对于每个主题文件
 	glob.sync(paths.app.themes).forEach(function(filePath) {
 
 		// Prepend file to styles glob
 		var src = [].concat(paths.app.styles);
 			src.unshift(filePath);
 
-		// Theme name
+		// 主题名
 		var name = "app-" + path.basename(filePath, '.js').replace("-theme", "");
 
 		gulp.src(src)

@@ -1,9 +1,9 @@
 var path = require('path');
 
-var rootDir = path.resolve("../");					// Root dir
-var srcDir = path.resolve("../src");				// Source files
-var destDir = path.resolve("../dist");				// Build destination
-var npmDir =  path.resolve("../node_modules");		// Npm dir
+var rootDir = path.resolve("../");					// 根目录
+var srcDir = path.resolve("../src");				// 源代码文件的目录
+var destDir = path.resolve("../dist");				// 编译生成的目录
+var npmDir =  path.resolve("../node_modules");		// Npm 依赖关系文件的目录
 
 var config = {
 	rootDir: rootDir,
@@ -14,7 +14,7 @@ var config = {
 	paths: {}
 };
 
-// Vendor libs paths
+// 第三方库（Vendor）的路径
 config.paths.vendor = {
 	scripts: [
 		npmDir + '/jquery/dist/jquery.js',
@@ -60,7 +60,7 @@ config.paths.vendor = {
 	assets: [],
 };
 
-// Application Paths
+// 应用程序（App）的路径
 config.paths.app = {
 	scripts: [
 		srcDir + "/config.js",
