@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>
-    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">Download ZIP</a>
+    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">查看演示</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">下载 ZIP</a>
   </strong>
 </p>
 
@@ -14,137 +14,137 @@
 
 
 #### Heads up for the ModularAdmin v2!
-We're working hard on version 2, which is a complete rewrite. 
-<a href="https://modular-admin-html.modularcode.io/" target="_blank">V2 demo</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a> <br>
-**Please consider [supporting us](#support-us) to make this happen!**
+我们正在努力编写版本2，这是一个完整的重写。
+<a href="https://modular-admin-html.modularcode.io/" target="_blank">V2 演示</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 代码</a> <br>
+**请考虑 [支持我们](#support-us) 让这一切发生！**
 
 ---
 
 
-## Getting Started
+## 入门
 
-> **Note:** If you don't want to re-build the project, you may just clone this branch directly  ```https://github.com/modularcode/modular-admin-html/tree/gh-pages```
+> **注意:** 如果您不想重新构建项目，您可以直接克隆这个分支。  ```https://github.com/dalistudio/modular-admin-html/tree/gh-pages```
 
-### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/latest) or Git Clone
+### 1. [下载 ZIP](https://github.com/dalistudio/modular-admin-html/releases/latest) 或者 Git 克隆
 
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
 ```
-### 2. Build the project
+### 2. 编译生成项目
 
-The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) (v4+) with npm (v2.15+) installed.
+克隆/下载的存储库不包含项目的预构建版本，您需要构建它。 你需要 [NodeJs](https://nodejs.org/en/) (v4+) 已安装 npm (v2.15+)
 
 
-Install npm dependencies 
+安装 npm 依赖关系（ubuntu中，windows不能通过编译） 
 ```
 npm install
 ```
 
-Build the project and start local web server
+编译生成项目和启动一个本地web服务器
 ```
 npm start
 ```
 
-Open the project [http://localhost:4000](http://localhost:4000).
+浏览器访问 [http://localhost:4000](http://localhost:4000).
 
 
-**Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
-
-<br>
-
-You can also <strong>[run the project in docker](#running-in-docker)</strong> thanks to @japrogramer
+**警告!** 在 ```dist/``` 文件夹中所做的所有更改都将在应用程序生成时覆盖。
 
 <br>
 
-## Folder Structure
+你还可以 <strong>[在 docker 中运行项目](#running-in-docker)</strong> 感谢 @japrogramer
+
+<br>
+
+## 目录结构
 
 ```
-├── build/               # app build tasks and tools
-├── config/              # build configs and paths definitions
-├── dist/                # compiled result
-├── node_modules/        # node dependencies        
-├── src/                 # source files
-└── package.json         # npm configuration file
+├── build/               # app 生成任务和工具
+├── config/              # 生成配置文件和路径定义
+├── dist/                # 生成编译结果
+├── node_modules/        # nodejs 依赖文件        
+├── src/                 # 源代码文件
+└── package.json         # npm 配置文件
 ```
 
-#### ```config/``` folder
+#### ```config/``` 目录
 
-This folder contains application build configurations and paths definitions.
+此文件夹包含应用程序生成配置和路径定义。
 For **adding/removing NPM dependencies** you need to **manually define the paths** in `config/index.js` file after the module installation.
 
-#### ```build/``` folder
+#### ```build/``` 目录
 
-This folder contains files related to our application compilation. That can be styles preprocessing (LESS,SASS,PostCSS) and template engine compilation, script file concatenation and minification and other related tasks.
-
-```
-├── tasks/                           # tasks folder
-|   └── {different tasks}            # each file represents a single build task
-├── utils/                           # some utils
-└── gulpfile.js                      # main build file for gulp build system
+此文件夹包含与应用程序编译相关的文件。 这可以是样式预处理（LESS、SASS、PostSS）和模板引擎编译、脚本文件连接和缩小以及其他相关任务。
 
 ```
-
-
-#### ```src/``` folder
-
-This folder contains our application source files. 
-The folder structure reflects the app component structure.
-
-
-Each non-underscored folder represents a single component module. Modules can be nested inside each other.
-
-There are also special folders which start with an underscore. 
-For example ```_common/``` folder contains common components that are used by other components at the same level.
-
-This file structuring makes our app file organization very semantic and scalable. Also It's very easy to work on separate components even if you're developing large-scale applications.
+├── tasks/                           # 任务目录
+|   └── {different tasks}            # 每个文件表示一个生成任务
+├── utils/                           # 一些实用工具
+└── gulpfile.js                      # gulp生成文件
 
 ```
-├── _assets/                           # application assets
-├── _common/                           # common components
-|   ├── helpers/                       # handlebars helpers
-|   └── styles/                        # application common styles
-├── _themes/                           # different theme versions
-├── app/                               # app module (dashboard view)
-│   ├── _common/                       # app common components
-│   |   ├── editor/                    # wysiwyg editor files
-│   |   ├── footer/                    # footer files
-│   |   ├── header/                    # header files
-│   |   ├── modals/                    # common modal dialogs (confirm, image library, etc)
-│   |   └── sidebar/                   # sidebar files
+
+
+#### ```src/``` 目录
+
+此文件夹包含我们的应用程序源文件。
+文件夹结构反映应用程序组件结构。
+
+
+每个非下划线文件夹表示一个组件模块。模块可以相互嵌套。
+
+还有一些以下划线开头的特殊文件夹。
+例如： ```_common/``` 目录包含由同一级别的其他组件使用的公共组件。
+
+这种文件结构使我们的应用程序文件组织非常语义化和可扩展性。此外，即使您正在开发大型应用程序，也很容易在单独的组件上工作。
+
+```
+├── _assets/                           # 应用程序资产
+├── _common/                           # 通用组件
+|   ├── helpers/                       # handlebars 助手
+|   └── styles/                        # 通用样式表
+├── _themes/                           # 不同的主题版本
+├── app/                               # app 模块 (仪表盘视图)
+│   ├── _common/                       # app 通用组件
+│   |   ├── editor/                    # wysiwyg 编辑器文件
+│   |   ├── footer/                    # 页脚文件
+│   |   ├── header/                    # 页眉文件
+│   |   ├── modals/                    # 通用模式对话框 (确认, 图像库, 等)
+│   |   └── sidebar/                   # 侧边栏文件
 │   ├── {different modules}
-│   ├── app-layout.hbs                 # app view layout
-│   └── app.scss                       # main app view styles
-├── auth/                              # auth module (login/signup/recover)
+│   ├── app-layout.hbs                 # app 视图布局
+│   └── app.scss                       # app 主视图样式表
+├── auth/                              # 辅助模块 (登录/注册/找回)
 │   ├── {different modules}
-│   ├── auth-layout.hbs                # auth view layout
-│   └── auth.scss                      # main auth view styles
+│   ├── auth-layout.hbs                # 辅助视图布局
+│   └── auth.scss                      # 辅助视图样式表
 ├── _context.js                        # main handlebars variables
-├── _main.scss                         # main styles
-├── _variables.scss                    # variables
-├── config.js                          # javascript configs
-└── main.js                            # main script file
+├── _main.scss                         # 主样式表
+├── _variables.scss                    # 表量表
+├── config.js                          # javascript 配置文件
+└── main.js                            # 主脚本文件
 
 ```
 
 
 
-#### ```dist/``` folder
+#### ```dist/``` 目录
 
-Compiled state of our app with processed styles, templates, scripts and assets.
+我们应用程序的编译状态，包括已处理的样式、模板、脚本和资产。
 
-**Warning! Never work inside this folder, because your changes would be overwritten on every build**
+**警告！永远不要在此文件夹中工作，因为每次生成时都将覆盖您的更改。**
 
 <br>
 
-## File Types
+## 文件类型
 
-Our app consists of different file types.
+我们的应用程序由不同的文件类型组成。
 
-#### Styles (*.scss)
+#### 样式表 (*.scss)
 
-We use [SASS](http://sass-lang.com/) as CSS preprocessor language. 
-Main variables are defined in ```src/_variables.scss``` folder. 
-For making life easier we broke down styles into components, and on build we're just merging all ```.scss``` files together and processing it to ```dist/css/app.css``` file. Style files are merged in the following order
+我们使用 [SASS](http://sass-lang.com/) CSS 预处理语言. 
+主要变量定义在 ```src/_variables.scss``` 目录. 
+为了让生活更轻松，我们将样式分解为组件，在构建时，我们只是将所有的 ```.scss``` 文件合并在一起，并将其处理为 ```dist/css/app.css``` 文件。样式文件按以下顺序合并
 
 ```
 {variables.scss}
@@ -152,13 +152,13 @@ For making life easier we broke down styles into components, and on build we're 
 {bootstrap mixins}
 {rest style files}
 ```
-The remaining style files are merged in the alphabetical order.
+其余的样式文件按字母顺序合并。
 
-There are also different theme variations located in ```src/_themes/ folder```, where you can change the main variables to get different themes. There are a few predefined themes built in. You can add new themes by adding a new file in ```src/_themes/``` folder. The file name must end with ```-theme.scss```.
+在 ```src/_themes/ folder```中还有不同的主题变体, 您可以在其中更改主变量以获得不同的主题。有一些内置的预定义主题。您可以通过在 ```src/_themes/``` 文件夹中添加新文件来添加新主题。文件名必须以 ```-theme.scss``` 结尾。
 
-#### Scripts (*.js)
+#### 脚本 (*.js)
 
-We separate application's scripts across its components. For simplicity we use ES5 in this version, and just wrap each component's script in jQuery ```$(function() { })```. JS configurations are defined in ```src/config.js``` file. On build, application script files are merged together and copied to ```dist/js/app.js``` folder. The script files are merged in the following order.
+我们在应用程序的各个组件之间分离应用程序的脚本。为了简单起见，我们在这个版本中使用ES5，并将每个组件的脚本包装在 jQuery ```$(function() { })```中。 JS配置在 ```src/config.js``` 文件中定义。在构建时，应用程序脚本文件合并在一起并复制到 ```dist/js/app.js``` 文件夹。脚本文件按以下顺序合并。
 
 ```
 {config.js}
@@ -166,15 +166,15 @@ We separate application's scripts across its components. For simplicity we use E
 {main.js}
 ```
 
-#### Templates (*.hbs)
+#### 模板 (*.hbs)
 
-Templates are pieces of HTML files written in template engine language. We use [Handlebars](http://handlebarsjs.com/), which allows to have conditions in HTML, reuse partials in different pages (e.g. sidebars, footers), use loops, layouts etc.
+模板是用模板引擎语言编写的HTML文件。我们使用 [Handlebars](http://handlebarsjs.com/), 它允许在HTML中有条件，在不同的页面中重用部分（如侧栏、页脚），使用循环、布局等。
 
-#### Pages (*-page.hbs)
+#### 页面 (*-page.hbs)
 
-Templates themselves are just parts of the markup, and aren't compiled as separate files. What we really want in the final output is a ```.html``` page in the ```dist/``` folder. There are special handlebar templates for it, their filenames ending with ```-page.hbs```. Each ```{pagename}-page.hbs``` file would be compiled to ```dist/{pagename}.html``` page with a flatened file structure.
+模板本身只是标记的一部分，不编译为单独的文件。在最终输出中，我们真正想要的是 ```dist/``` 文件夹中的 ```.html``` 页。 它有一些特殊的handlebars模板，它们的文件名以``-page.hbs``结尾。 每个 ```{pagename}-page.hbs``` 文件都将编译为 ```dist/{pagename}.html``` 页面具有扁平文件结构。
 
-Pages can consist of different templates (partials) which can be included thanks to handlebars partial including feature. Also each page has its context, which is a data passed into the template on rendering. That data is used in template expressions and variables. page contexts can be defined in two ways:
+页面可以由不同的模板（部分）组成，这些模板（部分）可以包含在handlebars部分包括功能中。另外，每个页面都有其上下文，这是在呈现时传递到模板中的数据。该数据用于模板表达式和变量。页面上下文可以用两种方式定义：
 
 **YAML** headers ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/dashboard/index-page.hbs))
 
@@ -200,54 +200,53 @@ module.exports = {
 }
 ```
 
-The final result of page context is a combination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. For simplicity we use only **YAML** headers.
+页面上下文的最终结果是两种方法的组合。此外，不同深度级别的context.js文件相互扩展，然后使用 YAML 头数据进行扩展。为了简单起见，我们只使用**YAML**头。
 
-#### Layouts (*-layout.hbs)
+#### 布局 (*-layout.hbs)
 
-If different pages have a lot of common components like sidebars, headers, footers, then it's a good idea to define a layout for those common pages, and define in page files only the content which is unique.
+如果不同的页面有许多常见的组件，如侧栏、页眉、页脚，那么最好为这些常见页面定义一个布局，并且只在页面文件中定义唯一的内容。
 
-Layout is a page content wrapper. If the page has a layout in output we'll get page's content inserted into the layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for the page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
+布局是一个页面内容包装器。如果页面在输出中有布局，我们将把页面的内容插入到布局中。布局应具有```{{{body}}}``` 手把标记，这是页面内容的入口点。 ([例子](https://github.com/dalistudio/modular-admin-html/blob/master/src/app/app-layout.hbs))
 
-To define a page layout you need to specify page file context's ```layout``` variable. It can be done both with a YAML header or a _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs)).
+要定义页面布局，需要指定页面文件上下文的 ```layout``` 变量。 它既可以使用 YAML 头文件，也可以使用 context.js 文件。 ([例子](https://github.com/dalistudio/modular-admin-html/blob/master/src/app/forms/forms-page.hbs)).
 
-Layouts can also have contexts and parent layouts.
+布局也可以有上下文和父布局。
 
 ```
-{_main-layout.hbs}                  # main layout with doctype, head, scripts declaration
-    {app/app-layout.hbs}            # dashboard layout with sidebar, header and footer
-        {app/forms/forms-page.hbs}  # any dashboard page
+{_main-layout.hbs}                  # 带有doctype、head、scripts声明的主布局
+    {app/app-layout.hbs}            # 带侧边栏、页眉和页脚的仪表板布局
+        {app/forms/forms-page.hbs}  # 任何仪表板页
 ```
 
-
-If you need more advanced layouting with multiple content blocks at the same time you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
+如果您需要多个内容块同时进行更高级的布局，您可以使用 [handlebar layouts](https://www.npmjs.com/package/handlebars-layouts)helper方法，这也是现成的。
 
 <br>
 
-## Running in Docker
+## 在 Docker 中运行
 
-You can run the project in docker. To build the container, you need to install docker and docker-compose than launch the docker daemon. After launching the daemon run the following commands from the project folder:
+你可以在Docker中运行这个项目。要构建容器，需要安装docker和docker compose，然后启动docker守护进程。启动守护程序后，从项目文件夹中运行以下命令：
 
-Build the image
+生成镜像
 ```
 docker-compose build
 ```
 
-Launch the container
+启动容器
 ```
 docker-compose up
 ```
 
 
-## Support us!
+## 支持我们！
 
-### Contribute
+### 贡献
 
-Be part of our team! Feel free to open new issues/pull-requests.
+加入我们的团队！随时打开新的 issues/pull。
 
-### Get in touch
+### 取得联系
 
-You can get in touch with us in gitter chat [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) or in the [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
-Feel free to contact us with any questions, sugestions, remarks and potential feature requests that you might have.
+你可以在聊天室和我们联系 [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)或者在 [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
+如果您有任何问题、建议、评论和潜在功能请求，请随时联系我们。
 
 * Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | gevharut[at]gmail.com
 * Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
@@ -255,9 +254,9 @@ Feel free to contact us with any questions, sugestions, remarks and potential fe
 
 
 
-### Backers
+### 支持者
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/modular-admin#backer)]
+支持我们每月捐赠，帮助我们继续我们的活动。 [[Become a backer](https://opencollective.com/modular-admin#backer)]
 
 <a href="https://opencollective.com/modular-admin/backer/0/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/0/avatar.svg"></a>
 <a href="https://opencollective.com/modular-admin/backer/1/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/1/avatar.svg"></a>
@@ -291,9 +290,9 @@ Support us with a monthly donation and help us continue our activities. [[Become
 <a href="https://opencollective.com/modular-admin/backer/29/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/29/avatar.svg"></a>
 
 
-## Sponsors
+## 赞助商
 
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/modular-admin#sponsor)]
+成为一个赞助商，在GitHub的自述文件中找到你的标志，并链接到你的网站。 [[Become a sponsor](https://opencollective.com/modular-admin#sponsor)]
 
 <a href="https://opencollective.com/modular-admin/sponsor/0/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/modular-admin/sponsor/1/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/1/avatar.svg"></a>

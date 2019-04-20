@@ -4,20 +4,20 @@ themeTitle: ModularAdmin
 ---
 <div class="main-wrapper">
   <div class="app" id="app">
-    {{!-- Default header block --}}
+    {{!-- 默认的页眉栏部分 --}}
     {{> app/_common/header/header}}
 
-    {{!-- Default sidebar block --}}
+    {{!-- 默认的边栏部分 --}}
     {{> app/_common/sidebar/sidebar}}
 
     <div class="mobile-menu-handle"></div>
 
-    {{!-- Content section --}}
+    {{!-- 内容部分 --}}
     <article class="content {{pagename}}-page">
       {{{body}}}
     </article>
 
-    {{!-- Default footer block --}}
+    {{!-- 默认的页脚部分 --}}
     {{> app/_common/footer/footer}}
 
     {{> app/_common/modals/modals}}

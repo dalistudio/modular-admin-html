@@ -15,11 +15,11 @@ $(function() {
 	    },
 	    messages: {
 	        username: {
-	            required: "Please enter username",
-	            email: "Please enter a valid email address"
+	            required: "请输入您的邮箱地址",
+	            email: "请输入一个正确的邮箱地址"
 	        },
-	        password:  "Please enter password",
-	        agree: "Please accept our policy"
+	        password:  "请输入密码",
+	        agree: "请接受我们的政策"
 	    },
 	    invalidHandler: function() {
 			animate({

@@ -58,21 +58,21 @@ $(function() {
 			}
 		},
 	    messages: {
-	    	firstname: "Please enter firstname and lastname",
-	    	lastname: "Please enter firstname and lastname",
+	    	firstname: "请输入名字和姓氏",
+	    	lastname: "请输入名字和姓氏",
 	        email: {
-	            required: "Please enter email",
-	            email: "Please enter a valid email address"
+	            required: "请输入邮箱地址",
+	            email: "请输入正确的邮箱地址"
 	        },
 	        password: {
-	        	required: "Please enter password fields.",
-	        	minlength: "Passwords should be at least 8 characters."
+	        	required: "请输入密码",
+	        	minlength: "密码至少需要8个字符"
 	        },
 	        retype_password: {
-	        	required: "Please enter password fields.",
-	        	minlength: "Passwords should be at least 8 characters."
+	        	required: "请确认密码",
+	        	minlength: "密码至少需要8个字符"
 	        },
-	        agree: "Please accept our policy"
+	        agree: "请同意我们的政策"
 	    },
 	    invalidHandler: function() {
 			animate({
