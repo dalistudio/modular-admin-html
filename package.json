@@ -4,14 +4,14 @@
   "description": "ModularAdmin: Free Dashboard Theme; html version",
   "repository": {
     "type": "git",
-    "url": "https://github.com/modularcode/modular-admin-html.git"
+    "url": "https://github.com/dalistudio/modular-admin-html.git"
   },
-  "author": "ModularCode",
-  "license": "ISC",
+  "author": "dalistudio",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/modularcode/modular-admin-html/issues"
+    "url": "https://github.com/dalistudio/modular-admin-html/issues"
   },
-  "homepage": "https://github.com/modularcode/modular-admin-html",
+  "homepage": "https://github.com/dalistudio/modular-admin-html",
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^4.3.1",

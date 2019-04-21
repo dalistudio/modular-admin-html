@@ -79,7 +79,7 @@ gulp.task('deploy', ['build'], function() {
 *********************************************/
 
 
-// // 运行此任务进行开发
+// 运行此任务进行开发
 gulp.task('develop', [
 	'build',
 	'watch',
