@@ -1,5 +1,5 @@
 /***********************************************
-*        Animation Settings
+*        动画设置
 ***********************************************/
 function animate(options) {
 	var animationName = "animated " + options.name;

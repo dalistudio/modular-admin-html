@@ -7,26 +7,27 @@
 *					  颜色定义
 **************************************************************/
 
-$color-primary: #85CE36 !default;
-$color-primary-light: lighten($color-primary, 10%) !default;
-$color-primary-lighter: lighten($color-primary-light, 6%) !default;
-$color-primary-dark: darken($color-primary, 10%) !default;
-$color-primary-darker: darken($color-primary-dark, 6%) !default;
+$color-primary: #85CE36 !default; /* 主要颜色 */
+$color-primary-light: lighten($color-primary, 10%) !default; /* 主要颜色变亮10% */
+$color-primary-lighter: lighten($color-primary-light, 6%) !default; /* 主要颜色变亮6% */
+$color-primary-dark: darken($color-primary, 10%) !default; /* 主要颜色变暗10% */
+$color-primary-darker: darken($color-primary-dark, 6%) !default;/* 主要颜色变暗6% */
 
-$color-divider: #d7dde4 !default;
-$color-bg: #f0f3f6 !default;
+/*$color-divider: #d7dde4 !default;*/
+$color-divider: #FE7A0E !default; /* 分割线颜色 */
+$color-bg: #f0f3f6 !default; /* 背景色 */
 
-$color-text: #4f5f6f !default;
-$color-text-light: #7e8e9f !default;
-$color-text-muted: #C2CCD6;
+$color-text: #4f5f6f !default; /* 文字颜色 */
+$color-text-light: #7e8e9f !default; /* 文字颜色-高亮 */
+$color-text-muted: #C2CCD6; /* 文字颜色-黯淡 */
 $color-text-inverse: #ffffff !default;
 $color-text-passive: #c5c5c5 !default;
 
-$color-success: #4bcf99 !default;
-$color-info: #76D4F5 !default;
-$color-warning: #fe974b !default;
-$color-danger: #FF4444 !default;
-$color-inverse: #131e26 !default;
+$color-success: #4bcf99 !default; /* 成功的颜色 */
+$color-info: #76D4F5 !default; /* 信息的颜色 */
+$color-warning: #fe974b !default; /* 警告颜色 */
+$color-danger: #FF4444 !default; /* 危险颜色 */
+$color-inverse: #131e26 !default; /* */
 
 
 /*************************************************************
@@ -36,37 +37,37 @@ $color-inverse: #131e26 !default;
 // 按钮
 $btn-radius: 25px !default;
 
-$btn-primary-color: $color-primary !default;
-$btn-primary-color-text: $color-text-inverse !default;
+$btn-primary-color: $color-primary !default; /* 按钮主要颜色 */
+$btn-primary-color-text: $color-text-inverse !default; /* 按钮文字主要颜色 */
 
 
 // 链接
-$link-color: #969696 !default;
-$link-transition: initial;
-$link-decoration: underline;
+$link-color: #969696 !default; /* 链接颜色 */
+$link-transition: initial; /* 链接过渡 */
+$link-decoration: underline; /* 链接装饰 - 下划线 */
 
-$link-hover-color: darken($color-primary, 8%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-color: darken($color-primary, 8%) !default; /* 链接悬停颜色 */
+$link-hover-decoration: underline !default; /* 链接悬停装饰 - 下划线 */
 
 // 页眉
-$header-height: 70px !default;
-$header-height-xs: 50px !default;
+$header-height: 70px !default; /* 页眉高度 */
+$header-height-xs: 50px !default; /* */
 
 // 侧边栏
-$sidebar-width: 240px !default;
+$sidebar-width: 240px !default; /* 侧边栏宽度 */
 
 // 页脚
-$footer-height: 50px !default;
+$footer-height: 50px !default; /* 页脚高度 */
 
-$sidebar-color-primary: darken(#4f5f6f, 10%) !default;
-$sidebar-color-secondary: darken($sidebar-color-primary, 6%) !default;
+$sidebar-color-primary: darken(#4f5f6f, 10%) !default; /* 侧边栏主要颜色变暗10% */
+$sidebar-color-secondary: darken($sidebar-color-primary, 6%) !default; /* 侧边栏次要颜色变暗6% */
 
-$sidebar-color-text: fade-out($color-text-inverse, 0.5) !default;
-$sidebar-color-text-active: $color-text-inverse;
+$sidebar-color-text: fade-out($color-text-inverse, 0.5) !default; /* 侧边栏文字颜色 - 淡出效果 */
+$sidebar-color-text-active: $color-text-inverse; /* 鼠标按下侧边栏文字颜色 */
 
 // 下拉菜单
-$dropbown-color-border: fade-out($color-text-light, 0.9) !default;
-$dropdown-link-hover-color-bg: #f5f5f5 !default;
+$dropbown-color-border: fade-out($color-text-light, 0.9) !default; /* 下拉框边框颜色 - 淡出效果 */
+$dropdown-link-hover-color-bg: #f5f5f5 !default; /* 下拉框悬停背景颜色 */
 
 // 内容
 $content-padding-x-xl: 40px !default;
@@ -93,11 +94,11 @@ $card-padding-x-sm: 10px !default;
 $card-margin-bottom: 10px;
 
 // 条目列表
-$item-list-color-border: lighten($color-divider, 6%) !default;
+$item-list-color-border: lighten($color-divider, 6%) !default; /* 条目边框颜色变亮6% */
 
 // 图表
-$chart-color-primary: $color-primary !default;
-$chart-color-secondary: lighten($chart-color-primary, 10%) !default;
+$chart-color-primary: $color-primary !default; /* 图表主要颜色 */
+$chart-color-secondary: lighten($chart-color-primary, 10%) !default; /* 图表次要颜色变亮10% */
 
 
 

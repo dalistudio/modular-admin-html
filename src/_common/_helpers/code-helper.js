@@ -3,24 +3,24 @@ module.exports.register = function (handlebars) {
 
 		var className = options.hash.lang || "";
 
-		// Input html
+		// 输入 html
 		var input = options.fn(this);
 
-		// Escale html to string
+		// 将HTML转换为字符串
 		input = handlebars.Utils.escapeExpression(input);
 
-		// Break by lines
+		// 断线
 		var lines = input.split("\n");
 
-		// Get number of tabs before first line
+		// 在第一行之前获取标签数
 		var numTabs = getNumFrontTabs(lines[0]);
 
-		// Remove tabs before 
+		// 删除前面的制表符 
 		lines = lines.map(function(line) {
 			return line.substring(numTabs);
 		});
 
-		// Rejoin the lines
+		// 重新加入行
 		return "<pre><code class='" + className + "'>" + lines.join("\n") + "</code></pre>";
 	});
 };

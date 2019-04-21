@@ -21,7 +21,7 @@ $(function() {
         $(".items-list-page .sparkline").each(function() {
             var type = $(this).data('type');
 
-            // Generate random data
+            // 产生随机数据
             var data = [];
             for (var i = 0; i < 17; i++) {
                 data.push(Math.round(100 * Math.random()));
