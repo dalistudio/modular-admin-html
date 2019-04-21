@@ -6,11 +6,11 @@ $(function() {
 
 
 /***********************************************
-*        NProgress Settings
+*        NProgress 进度条设置
 ***********************************************/
 
-// start load bar
+// 启动加载进度条
 NProgress.start();
 
-// end loading bar 
+// 结束已经加载的进度条
 NProgress.done();

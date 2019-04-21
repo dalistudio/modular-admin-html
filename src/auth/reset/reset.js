@@ -1,4 +1,4 @@
-//ResetForm validation
+// 找回表单验证
 $(function() {
 	if (!$('#reset-form').length) {
         return false;

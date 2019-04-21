@@ -1,4 +1,4 @@
-//LoginForm validation
+// 登录表单验证
 $(function() {
 	if (!$('#login-form').length) {
         return false;

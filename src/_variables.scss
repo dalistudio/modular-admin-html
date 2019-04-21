@@ -1,10 +1,10 @@
 /*************************************************************
-*						App Variables
+*						App 变量
 **************************************************************/
 
 
 /*************************************************************
-*					  Colors Definitions
+*					  颜色定义
 **************************************************************/
 
 $color-primary: #85CE36 !default;
@@ -30,17 +30,17 @@ $color-inverse: #131e26 !default;
 
 
 /*************************************************************
-*					Common Element Variables
+*					公共元素变量
 **************************************************************/
 
-// Buttons
+// 按钮
 $btn-radius: 25px !default;
 
 $btn-primary-color: $color-primary !default;
 $btn-primary-color-text: $color-text-inverse !default;
 
 
-// Links
+// 链接
 $link-color: #969696 !default;
 $link-transition: initial;
 $link-decoration: underline;
@@ -48,14 +48,14 @@ $link-decoration: underline;
 $link-hover-color: darken($color-primary, 8%) !default;
 $link-hover-decoration: underline !default;
 
-// Header
+// 页眉
 $header-height: 70px !default;
 $header-height-xs: 50px !default;
 
-// Sidebar
+// 侧边栏
 $sidebar-width: 240px !default;
 
-// Footer
+// 页脚
 $footer-height: 50px !default;
 
 $sidebar-color-primary: darken(#4f5f6f, 10%) !default;
@@ -64,11 +64,11 @@ $sidebar-color-secondary: darken($sidebar-color-primary, 6%) !default;
 $sidebar-color-text: fade-out($color-text-inverse, 0.5) !default;
 $sidebar-color-text-active: $color-text-inverse;
 
-// Dropdowns
+// 下拉菜单
 $dropbown-color-border: fade-out($color-text-light, 0.9) !default;
 $dropdown-link-hover-color-bg: #f5f5f5 !default;
 
-// Content
+// 内容
 $content-padding-x-xl: 40px !default;
 $content-padding-y-xl: 35px !default;
 
@@ -85,25 +85,25 @@ $content-padding-x-xs: 10px !default;
 $content-padding-y-xs: 15px !default;
 
 
-// Card
+// 卡片
 $card-padding-x: 15px !default;
 $card-padding-x-xl: 20px !default;
 $card-padding-x-sm: 10px !default;
 
 $card-margin-bottom: 10px;
 
-// Item list
+// 条目列表
 $item-list-color-border: lighten($color-divider, 6%) !default;
 
-// Charts
+// 图表
 $chart-color-primary: $color-primary !default;
 $chart-color-secondary: lighten($chart-color-primary, 10%) !default;
 
 
 
 /* ***************************************************
-*			Page Specific Element Variables
+*			页面特殊元素变量
 ****************************************************** */
 
-// Dashboard
+// 仪表盘
 $dashboard-stat-icon-color: #BDBDBD !default;

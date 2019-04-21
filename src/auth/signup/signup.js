@@ -1,4 +1,4 @@
-//SignupForm validation
+// 注册表单验证
 $(function() {
 	if (!$('#signup-form').length) {
         return false;

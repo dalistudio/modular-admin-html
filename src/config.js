@@ -1,9 +1,9 @@
 var config = window.config = {};
 
-// Config reference element
+// 配置引用元素
 var $ref = $("#ref");
 
-// Configure responsive bootstrap toolkit
+// 配置响应式 bootstrap 工具箱
 config.ResponsiveBootstrapToolkitVisibilityDivs = {
     'xs': $('<div class="device-xs 				  hidden-sm-up"></div>'),
     'sm': $('<div class="device-sm hidden-xs-down hidden-md-up"></div>'),
@@ -14,37 +14,37 @@ config.ResponsiveBootstrapToolkitVisibilityDivs = {
 
 ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
 
-//validation configuration
+// 表单验证的配置
 config.validations = {
 	debug: true,
 	errorClass:'has-error',
 	validClass:'success',
 	errorElement:"span",
 
-	// add error class
+	// 添加错误的类
 	highlight: function(element, errorClass, validClass) {
 		$(element).parents("div.form-group")
 		.addClass(errorClass)
 		.removeClass(validClass); 
 	}, 
 
-	// add error class
+	// 添加错误的类
 	unhighlight: function(element, errorClass, validClass) {
 		$(element).parents(".has-error")
 		.removeClass(errorClass)
 		.addClass(validClass); 
 	},
 
-	// submit handler
+	// 提交的处理器
     submitHandler: function(form) {
         form.submit();
     }
 }
 
-//delay time configuration
+// 延迟时间的配置
 config.delayTime = 50;
 
-// chart configurations
+// 图表的配置
 config.chart = {};
 
 config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));
