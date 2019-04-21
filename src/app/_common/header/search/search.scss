@@ -1,8 +1,8 @@
 .header .header-block-search {
 	$line-height: $header-height - 30px;
-	margin-right: auto;
+	margin-left: auto;
 
-	// float: left;
+	float: left;
 	padding-left: $content-padding-x-md;
 
 	@include media-down(sm) {
@@ -37,6 +37,7 @@
 		i {
 			position: absolute;
 			pointer-events: none;
+			padding-left: 5px;
 			display: block;
 			height: $line-height;
 			line-height: $line-height;
@@ -45,7 +46,7 @@
 
 		input {
 			background-color: transparent;
-			border: none;
+			border: 1px solid $color-divider;
 			padding-left: 25px;
 			height: 40px;
 			max-width: 150px;

@@ -50,6 +50,7 @@ $link-hover-color: darken($color-primary, 8%) !default; /* 链接悬停颜色 */
 $link-hover-decoration: underline !default; /* 链接悬停装饰 - 下划线 */
 
 // 页眉
+$header-color: #131e26; /* 页眉颜色 */
 $header-height: 70px !default; /* 页眉高度 */
 $header-height-xs: 50px !default; /* */
 
@@ -57,7 +58,7 @@ $header-height-xs: 50px !default; /* */
 $sidebar-width: 240px !default; /* 侧边栏宽度 */
 
 // 页脚
-$footer-height: 50px !default; /* 页脚高度 */
+$footer-height: 24px !default; /* 页脚高度 */
 
 $sidebar-color-primary: darken(#4f5f6f, 10%) !default; /* 侧边栏主要颜色变暗10% */
 $sidebar-color-secondary: darken($sidebar-color-primary, 6%) !default; /* 侧边栏次要颜色变暗6% */

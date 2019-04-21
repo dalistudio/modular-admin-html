@@ -3,7 +3,7 @@
 	width: $sidebar-width;
 	padding-bottom: 60px;
 	position: absolute;
-	top: 0;
+	top: $header-height;
 	left: 0;
 	bottom: 0;
 	transition: left 0.3s ease;

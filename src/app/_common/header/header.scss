@@ -1,12 +1,13 @@
 .header {
 	/*background-color: $color-divider;*/
-	background-color: #131e26;
+	background-color: $header-color;
 	height: $header-height;
 	position: absolute;
-	left: $sidebar-width;
-	right: 0;
+	//left: $sidebar-width;
+	width: 100%;
+	left: 0;
 	transition: left 0.3s ease;
-	z-index: 10;
+	z-index: 9999;
 
 	display: flex;
 	align-items: center;
