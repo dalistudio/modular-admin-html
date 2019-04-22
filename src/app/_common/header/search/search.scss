@@ -1,5 +1,5 @@
 .header .header-block-search {
-	$line-height: $header-height - 30px;
+	$line-height: $header-height - 40px;
 	margin-left: auto;
 
 	float: left;
@@ -33,6 +33,7 @@
 	.input-container {
 		position: relative;
 		color: $color-text-light;
+		vertical-align: middle;
 
 		i {
 			position: absolute;
@@ -46,9 +47,10 @@
 
 		input {
 			background-color: transparent;
-			border: 1px solid $color-divider;
+			color: $color-text-light;
+			border: 1px solid $color-text-light;
 			padding-left: 25px;
-			height: 40px;
+			height: 32px;
 			max-width: 150px;
 
 			@include media-down(sm) {
